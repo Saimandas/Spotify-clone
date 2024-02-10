@@ -1,0 +1,264 @@
+*{
+    margin:0;
+    padding:0;
+    
+    
+}
+
+body,html{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 2px;
+}
+#main{
+    height: 98vh;
+    width: 99vw;
+    display: flex;
+    padding: 4px 6px;
+    gap: 10px;
+    position: fixed;
+}
+#left{
+    height: 92%;
+    width: 23%;
+    background-color:#000;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 8px;
+}
+
+#right{
+    height: 92%;
+    width: 77%;
+    background-color:#121212;
+    border-radius: 9px;
+}
+#play{
+    width: 99vw;
+    height: 8%;
+    background-color: black;
+    position: fixed;
+    bottom: 7px;
+    display: flex;
+    justify-content: space-between;
+    left: 7px;
+}
+#nav{
+    height: 64px;
+   
+    width: 100%;
+}
+#arrow{
+    position: relative;
+    left:2%;
+    height: 80%;
+    width: 10%;
+}
+#arrow img{
+    position: relative;
+    top:17px;
+    border-radius: 50%;
+    filter: invert(1);
+    background-color: rgba(250, 248, 248, 0.781);
+    padding: 4px;
+    
+}
+
+
+
+
+.album{
+    height: 92%;
+    width: 100%;
+    padding: 2px;
+    border-bottom: 9px;
+    border-radius: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.card {
+    height: 275px;
+    width: 200px;
+    margin-left: 2%;
+    background-color:#28282827;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6%;
+    position: relative;
+    top: 125px;
+
+  
+}
+
+.card .img{
+    width: 75%;
+    height: 55%;
+    border-radius: 7%;
+    margin-top: -9%;
+    border-bottom: 8px solid red;
+   overflow: hidden;
+    
+
+
+}
+.card img{
+    width: 100%;
+    object-fit: contain;
+}
+.card #text{
+    display: block;
+    display: block;
+    flex: none;
+    width: 100%;
+    height: 53px;
+   color: white;
+    flex: none;
+    padding-left: 30%;
+    margin-top: 5%;
+}
+.card p{
+    font-size:13px;
+    font-weight: 200;
+    font-family:'Times New Roman', Times, serif;
+}
+.card h3{
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#song{
+    height: 100%;
+    width: 25%;
+    
+}
+#playbar{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    gap:2%;
+    filter: invert(1);
+}
+#info{
+    height: 100%;
+    width: 25%;
+}
+#playbar img{
+    position: relative;
+    top: 10px;
+}
+
+.card:hover{
+    background-color: #28282888;;
+    transition-duration : 1s ;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 20px;
+   
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    width: 10px;
+    height: 20px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+#icons{
+    height: 50px;
+    width: 80px;
+    background-color: aqua;
+    position: absolute;
+}
+
+#logo{
+    height:14%;
+   width: 96%;
+    background-color: #121212;
+    border-radius: 6px;
+}
+#lib{
+    height:85%;
+   width: 96%;
+    background-color: #121212;
+    border-radius: 6px;
+}
+ul{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20%;
+}
+li{
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 34px; 
+    filter: invert(1);
+}
+#logo{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h4{
+    position: relative;
+    left: 14px;
+}
+#playbtn{
+    cursor: pointer;    
+}
+
+@media (max-width:900px) {
+    #left{
+     display: none;
+    }
+    #right{
+        width: 100vw;
+    }
+    .album{
+        position: relative;
+        left: 5%;
+    }
+    .card{
+        width: 35vw;
+        height: 20vh;
+        border-bottom: 1px solid red;
+        margin-top: 2%;
+        font-size: small;
+        margin-top: 20px;
+    }
+    .card text{
+        height: 30px;
+    }
+    #arrow{
+        display: none;
+    }
+    
+}
