@@ -37,6 +37,8 @@ body,html{
     width: 77%;
     background-color:#121212;
     border-radius: 9px;
+    display: flex;
+    flex-direction: column;
 }
 #play{
     width: 99vw;
@@ -50,7 +52,9 @@ body,html{
 }
 #nav{
     height: 64px;
-   
+    position: absolute;
+    top: 1%;
+    z-index: 11;
     width: 100%;
 }
 #arrow{
@@ -261,4 +265,109 @@ h4{
         display: none;
     }
     
+}
+
+.songs{
+    width: 100vw;
+    height: 80vh;
+    background-color:yellow;
+}
+#top{
+    width: 100%;
+    height: 20%;
+    background-color: aqua;
+
+}
+
+#top{
+    height: 30%;
+    width: 100%;
+    background-color: brown;
+  
+}
+
+#btm{
+    height: 70%;
+    width: 100%;
+    background-color: thistle;
+    display: flex;
+    justify-content: space-around;
+}
+#list{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4%;
+}
+.coverimg{
+   height: 45px;
+   width: 45px;
+   background-color: aqua;
+}
+.list1{
+    height: 100%;
+    width: 20%;
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+}
+
+.index{
+    display: flex;
+    display: flex;
+    width: 100%;
+    height: 45px;
+    margin-top: 17%;
+    gap: 9%;
+    position: relative;
+    left: 12px;
+}
+
+
+.list2{
+    height: 100%;
+    width: 20%;
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+}
+
+.list3{
+    height: 100%;
+    width: 20%;
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+}
+
+.list2 .albumSongs{
+  
+    display: flex;
+    display: flex;
+    width: 80%;
+    height: 45px;
+    margin-top: 17%;
+    gap: 9%;
+    position: relative;
+    left: 12px;
+    background-color: aqua; 
+    justify-content: center;
+}
+
+.list3 .timeSongs{
+    
+    display: flex;
+    display: flex;
+    width: 80%;
+    height: 45px;
+    margin-top: 17%;
+    gap: 9%;
+    position: relative;
+    left: 12px;
+    background-color: aqua; 
+    justify-content: center;
+}
+#albumimage{
+    height: 80%;
+    width: 30%;
+    background-color: aquamarine;
 }
