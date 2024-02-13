@@ -280,14 +280,14 @@ h4{
 }
 
 #top{
-    height: 30%;
+    height: 34%;
     width: 100%;
     background-color: brown;
   
 }
 
 #btm{
-    height: 70%;
+    height: 66%;
     width: 100%;
     background-color: thistle;
     display: flex;
@@ -371,3 +371,25 @@ h4{
     width: 30%;
     background-color: aquamarine;
 }
+
+.coverimg img{
+    height:100%;
+    width: 100%;
+}
+
+
+#top #img{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 8%;
+    left: 26%;
+}
+
+#top #img img{
+    height: 100%;
+    width: 100%;
+}
+
+
+

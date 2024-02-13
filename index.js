@@ -12,20 +12,14 @@ for(let i=0;i<=8;i++){
 }
 
 
-const albums= [{song:"heyyy..",artist:"Arjit",img:"./img/Arijit-Singh-Latest-Style-Images-Download-2.jpg",index:"1"},{},{}]
+const songInfo= [{song:"heyyy..",artist:"Arjit",img:"./img/Arijit-Singh-Latest-Style-Images-Download-2.jpg",index:"1"}]
+const albumarr=[{image:"hello"}]
 
 
 
 const client_id = '8adcfe0ab82341e484cb80c8e45ec16f'; 
 const client_secret = '7239a79f046f4c73a4dfd09e10b6d794';
-/**
- * This is an example of a basic node.js script that performs
- * the Client Credentials oAuth2 flow to authenticate against
- * the Spotify Accounts.
- *
- * For more information, read
- * https://developer.spotify.com/documentation/web-api/tutorials/client-credentials-flow
- */
+
 
 async function getToken() {
   const response = await fetch('https://accounts.spotify.com/api/token', {
@@ -51,17 +45,32 @@ async function getAlbum(access_token) {
   return await response.json();
 }
 
-getToken().then((e) => {
-  getAlbum(e.access_token).then((album) => {
-    console.log(album);
-  })
-});
+var temp;
+async function fetchAndLogData() {
+  try {
+      const e = await getToken();
+      const album = await getAlbum(e.access_tokens);
+      const temp = album.images[0].url;
+      albumarr.push({ image: temp });
+      console.log(album);
+    const albumImage=document.querySelector("#top #img");
 
+
+   albumarr.forEach((e)=>{
+    albumImage.innerHTML=`<img src=${e.image} alt="">`
+   })
+     
+  } catch (error) {
+      console.error(error);
+  }
+}
+
+fetchAndLogData();
 
 const clutter= "";
-
+ 
   const songName=document.querySelector(".list1");
 
-albums.forEach((e)=>{
-  songName.innerHTML= `<div class="index">${e.index} <div class="coverimg"></div><p>${e.song}</p></div>`;
+songInfo.forEach((e)=>{
+  songName.innerHTML+= `<div class="index">${e.index} <div class="coverimg"><img src="./img/Arijit-Singh-Latest-Style-Images-Download-2.jpg" alt=""></div><p>${e.song}</p></div>`;
 })
